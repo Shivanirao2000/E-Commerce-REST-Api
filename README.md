@@ -1,12 +1,29 @@
 
-# E-Commerce-REST-Api
-> This is an E-Commerce REST Api where user can make purchases of different range of products.
+# E-Commerce REST API
 
-## Features
-* System architecture – MVC architecture.
-* Backend server environment – Node.js
-* Backend Framework – Express
-* Database - MongoDB
+> This is an E-Commerce REST API that can be used for any kind of product selling based application or website.
+
+## Description
+
+* User should Signup using his email and password.
+
+* User with an account can Login and he gets an authorization token which is active for 2 hour. He should login again after this expires.
+
+* User can view, add, edit or delete products.
+
+* One can order any of the exsisting product with required quantity.
+
+* User can view or delete his orders.
+
+### Features
+
+* System architecture – **MVC architecture**
+
+* Backend server environment – **Node.js**
+
+* Backend Framework – **Express**
+
+* Database - **MongoDB**
 
 ## Routes
 
@@ -319,7 +336,7 @@
       },
       "request": {
           "type": "GET",
-          "url": "http://localhost:3000/orders"
+          "url": "{url}/orders"
       }
     }
     ```
@@ -352,20 +369,25 @@
 
 
 ## SetUp
+
 * Install Node.js
+
 * Clone Git repository into desired location on your device.
 ```
-git clone https://github.com/Shivanirao2000/E-Commerce-REST-Api.git
-cd E-Commerce-REST-Api
+git clone https://github.com/shree-vidya/E-commerce-REST-API.git
+cd E-commerce-REST-API
 ```
+
 * Install the required dependencies
 ```
  npm init
- npm install express express-session body-parser ejs method-override --save
- npm install mongoose passport passport-local passport-local-mongoose --save
+ npm install express express-session body-parser ejs jsonwebtoken bcrypt --save
+ npm install mongoose morgan multer dotenv method-override --save
  ```
+
  * Run Node.js server
  ```
  node server.js
  ```
- * The api can be opened on any browser or Postman using [http://localhost:3000](http://localhost:3000)
+
+ * The API can be opened on any browser or Postman using [http://localhost:3000](http://localhost:3000)
