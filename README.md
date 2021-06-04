@@ -380,9 +380,7 @@ cd E-commerce-REST-API
 
 * Install the required dependencies
 ```
- npm init
- npm install express express-session body-parser ejs jsonwebtoken bcrypt --save
- npm install mongoose morgan multer dotenv method-override --save
+ npm install
  ```
 
  * Run Node.js server
