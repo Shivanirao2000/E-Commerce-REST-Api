@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express=require('express');
 const app=express();
 const morgan=require('morgan');
@@ -18,7 +19,7 @@ const productRoutes=require('./api/routes/products');
 const orderRoutes=require('./api/routes/orders');
 const userRoutes = require('./api/routes/user')
 
-mongoose.connect('mongodb+srv://shivani:api_project@cluster0-8mcn0.mongodb.net/test?retryWrites=true&w=majority',{
+mongoose.connect('mongodb+srv://shivani:'+process.env.MONGO_DB_PASSWORD+'@cluster0-8mcn0.mongodb.net/test?retryWrites=true&w=majority',{
     // useMongoClient: true
     useUnifiedTopology: true,
 	useNewUrlParser: true,
